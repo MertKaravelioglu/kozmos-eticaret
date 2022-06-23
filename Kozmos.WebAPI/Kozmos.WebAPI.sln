@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kozmos.WebAPI", "Kozmos.WebAPI\Kozmos.WebAPI.csproj", "{18CC04DA-AB29-4EE8-B355-229A8C39115F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{18CC04DA-AB29-4EE8-B355-229A8C39115F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18CC04DA-AB29-4EE8-B355-229A8C39115F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18CC04DA-AB29-4EE8-B355-229A8C39115F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18CC04DA-AB29-4EE8-B355-229A8C39115F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C109D81E-C2E5-4B95-B62B-F0168AB409BD}
+	EndGlobalSection
+EndGlobal
