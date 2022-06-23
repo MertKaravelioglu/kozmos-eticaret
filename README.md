@@ -10,4 +10,4 @@ Bu Kapsamda; <br>
 Kısımlarında görev aldık.<br>
 Projeye ait Backend tarafı REST API routeları da aşağıdaki görselde yer almaktadır.
  <br>
-![alt text](https://github.com/MertKaravelioglu/kozmos-eticaret/blob/main/project-images/backend.png)
+![screencapture-localhost-44358-swagger-index-html-2022-06-23-22_55_24](https://user-images.githubusercontent.com/54938929/175387334-f829412a-7937-4856-9dbc-eb988ca7f1ec.png)
