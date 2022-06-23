@@ -34,7 +34,7 @@ namespace Kozmos.WebAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            string connectionString = Configuration.GetConnectionString("Connection");
+            string connectionString = Configuration.GetConnectionString("DefaultConnectionString");
             string secretStr = Configuration["Application:Secret"];
             byte[] secret = Encoding.UTF8.GetBytes(secretStr);
 
@@ -74,7 +74,7 @@ namespace Kozmos.WebAPI
                     }
                 });
             });
-            services.AddDbContext<KozmosContext>(options => options.UseSqlServer(Configuration.GetConnectionString("PublishedConnectionString")));
+            services.AddDbContext<KozmosContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnectionString")));
             services.AddTransient<ProductsServices>();
             services.AddTransient<CategoryServices>();
             services.AddTransient<SiteInfoServices>();
