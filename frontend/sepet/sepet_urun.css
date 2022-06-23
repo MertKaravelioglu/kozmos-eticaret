@@ -1,0 +1,9 @@
+.sepet-urun{
+    border: 1px solid;
+}
+
+img.buybutton {
+    position: fixed;
+    bottom: 10px;
+    left: calc(100% - 42px);
+}

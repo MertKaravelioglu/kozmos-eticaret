@@ -1,0 +1,154 @@
+html{
+    height: 100%;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /*
+    background-image: url(background.png);
+    */
+    height: 100%;
+    margin-block-start: 0px;
+}
+
+.homebutton {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+}
+
+.slice {
+    background-color: black;
+    height: 1px;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1;
+}
+
+.navtop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding-top: 10px;
+}
+
+.aramakutusu {
+    width: 30%;
+    display: flex;
+    align-items: center;
+}
+
+.aramakutusu>input {
+    border-radius: 10px 0px 0px 10px;
+    border: 1px solid black;
+    border-right: 0px solid black;
+    width: 150px;
+    height: 30px;
+    padding: 0px 0px 0px 10px;
+}
+
+.aramakutusu>input:focus {
+    border: 1px solid black;
+    border-right: 0px solid black;
+}
+
+.aramakutusu .find {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 0px 10px 10px 0px;
+
+    border: 1px solid black;
+    border-left: 0px solid blue;
+    width: 30px;
+    aspect-ratio: 1;
+}
+
+.navtopleft {
+    display: flex;
+    width: 30%;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.logo {
+    color: blue;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.hesap {
+    display: flex;
+    align-items: center;
+
+    padding: 10px;
+    height: 100%;
+
+    user-select: none;
+}
+
+.hesap:hover {
+    background-color: rgb(200, 200, 200);
+}
+
+.hesap>img {
+    border-radius: 50%;
+}
+
+.navbottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navitem {
+    padding-top: 20px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    user-select: none;
+    border: none;
+}
+
+.navitem:hover {
+    background-color: rgb(200, 200, 200);
+}
+
+.hesapAdi {
+    margin-left: 10px;
+}
+
+.navitem option {
+    background-color: white;
+    height: 100px;
+    font-size: 20px;
+}
+
+.welcome {
+    display: flex;
+    height: max-content;
+    font-size: 5rem;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 1100px) {
+    .navtop{
+        display:flex;
+    flex-direction: column;align-items: center;}
+    .aramakutusu{
+        width:fit-content;
+    }
+    .navtopleft{
+        display: none;
+        }
+    .aramakutusu{
+
+    display: none;}
+}

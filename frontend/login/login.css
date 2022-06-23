@@ -1,0 +1,91 @@
+.form_container{
+    
+display: flex;
+    
+align-items: center;
+    
+height: calc(-200px + 100%);
+    
+justify-content: center;
+    
+flex: 1 5 auto;
+    
+flex-direction: column;
+}
+
+.form_container>form>input {
+    display: block;
+    border: 1px solid rgb(0 0 0);
+    height: 50px;
+    width: calc(100% - 80px);
+    font-size: larger;
+    padding-inline: 20px;
+}
+
+.form_container>form {
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    width: 400px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.form_container>form>input[type="submit"] {
+    margin: 0px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: white;
+}
+.form_container>form>input[type="submit"]:hover {
+    background-color: rgb(200, 200, 200);
+}
+
+.login_baslik {
+    font-size: xxx-large;
+    margin-bottom: 10px;
+}
+
+.form_container>form.signin-form {
+    height: 400px;
+    gap: 1;
+}
+.login_mesaj{
+    color: red;
+    padding-bottom: 10px;
+}
+
+textarea {
+    display: block;
+    border: 1px solid rgb(0 0 0);
+    height: 50px;
+    width: calc(100% - 80px);
+    font-size: larger;
+    padding-inline: 20px;
+    font-family: auto;
+    padding-top: 10px;
+    height: 250px;
+}
+
+form.iletisim-form>form {
+    width: 100px;
+}
+
+form.iletisim-form {
+    width: 800px;
+    height: 450px;
+}
+
+@media only screen and (max-width: 1100px) {
+    .form_container>form{
+        width: 100%;
+    }
+    
+    form.iletisim-form>form {
+        width: 100%;
+    }
+    
+    form.iletisim-form {
+        width: 100%;
+    }
+}

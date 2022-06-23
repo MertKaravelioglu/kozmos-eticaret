@@ -1,0 +1,16 @@
+[
+    {
+        "id":0,
+        "comment":"güzel bir ürün",
+        "user-name":"Username",
+        "pp": "./icons/pp.png",
+        "star":5
+    },
+    {
+        "id":1,
+        "comment":"Bu ürünü beğenmedim",
+        "user-name":"Username",
+        "pp": "./icons/pp.png",
+        "star":1
+    }
+]

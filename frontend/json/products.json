@@ -1,0 +1,21 @@
+[
+    {
+        "productId": 1,
+        "productName": "Müslüm Plak",
+        "productImage": "müslüm.jpg",
+        "priceWithoutDiscount": 150.9900,
+        "priceWithDiscount": 130.9900,
+        "stock": 15,
+        "youtubeUrl": "youtube/muslumplak",
+        "productDescription": "Müslüm Gürses Plak Açıklama",
+        "categoryName": "Plak"
+    },
+    {
+        "categoryId": 1,
+        "categoryName": "Plak",
+        "products": [
+            "Müslüm Plak",
+            "Sezen Plak"
+        ]
+    }
+]

@@ -1,0 +1,538 @@
+{
+	"info": {
+		"_postman_id": "aadfd5ae-a6a9-4822-af87-e6cc95189890",
+		"name": "API",
+		"description": "Sadece Admin Tarafında Kullanılacak İstekler(Betül, Ecem):\n\n*Add Category\n\n*Add Product\n\n*Delete Category\n\n*Delete Product\n\n*Get Customer Messages\n\n*Change Resolved State\n\n*Update Product\n\n*Change Featured State\n\n*Edit Site Info\n\nBunlar dışında kalan istekler her iki tarafta da kullanılacaktır.\n\nAyrıca kullanıcının göreceği tarafta (Adem,adnan):\n\nlocalstorageda sepet yapısı oluşturulacak ve henüz giriş yapmayan kişi bile sepete ürün ekleyebilecek. Backend kısmında sepeti karşılayan bir nesne oluşturulmadı o nesne frontendde oluşturulacak biz sadece o sepeti ürün ödeme aşamasında oluşturacağımız route ile alacağız(daha oluşturulmadı sakin olunuz.)\n\nNe işe yaradığını bilmediğiniz routeları sorabilirsiniz.\n\nİş yapmayı reddeden arkadaşlar söylesin o işi bi şekilde biz de yaparız ama gidip hocaya desin ben bunu yapmıyorum bana not vermeyin diye. Yatıp da saatlerini veren arkadaşların hakkına giremez kimse, bizle aynı puanı alamazsınız, aldırtmayız.\n\nKolay gelsin herkese.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12646916"
+	},
+	"item": [
+		{
+			"name": "Add Category",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"categoryName\": \"Pikap\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://kozmosapi-001-site1.itempurl.com/api/Categories",
+					"protocol": "http",
+					"host": [
+						"kozmosapi-001-site1",
+						"itempurl",
+						"com"
+					],
+					"path": [
+						"api",
+						"Categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Categories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://kozmosapi-001-site1.itempurl.com/api/Categories",
+					"protocol": "http",
+					"host": [
+						"kozmosapi-001-site1",
+						"itempurl",
+						"com"
+					],
+					"path": [
+						"api",
+						"Categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token gelecek}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"productName\": \"Canon Fotoğraf Makinesi\",\r\n  \"productImage\": \"canonfotografmakinesi.jpg\",\r\n  \"priceWithoutDiscount\": 2200.0000,\r\n  \"priceWithDiscount\": 1180.0000,\r\n  \"stock\": 38,\r\n  \"youtubeUrl\": \"https://youtube.com/fotografmakinesi\",\r\n  \"productDescription\": \"Profesyonel fotoğraf makinesi\",\r\n  \"categoryId\": 5\r\n}\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://kozmosapi-001-site1.itempurl.com/api/Products",
+					"protocol": "http",
+					"host": [
+						"kozmosapi-001-site1",
+						"itempurl",
+						"com"
+					],
+					"path": [
+						"api",
+						"Products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Products",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIyZDVlMGZjNy1kM2M4LTQ5OWYtYTU4My0yNjkwZTNkMmM0NzciLCJ1bmlxdWVfbmFtZSI6Ikhha2FuIEFrZG_En2FuIiwiZW1haWwiOiJoYWthbkBleGFtcGxlLmNvbSIsIm5iZiI6MTY1MzczODY1NCwiZXhwIjoxNjUzODI1MDU0LCJpYXQiOjE2NTM3Mzg2NTQsImlzcyI6Ikp3dFRva2VuV2l0aElkZW50aXR5IiwiYXVkIjoiSnd0VG9rZW5XaXRoSWRlbnRpdHkifQ.jZcW1_Of1pwTRypKq-trbia4YdtbZhMhIpybGHp96YE\",\"expireDate\": \"2022-05-29T11:50:54.084625Z",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://kozmosapi-001-site1.itempurl.com/api/Products",
+					"protocol": "http",
+					"host": [
+						"kozmosapi-001-site1",
+						"itempurl",
+						"com"
+					],
+					"path": [
+						"api",
+						"Products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Category",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://kozmosapi-001-site1.itempurl.com/api/Categories/{{id gelecek}}",
+					"protocol": "http",
+					"host": [
+						"kozmosapi-001-site1",
+						"itempurl",
+						"com"
+					],
+					"path": [
+						"api",
+						"Categories",
+						"{{id gelecek}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token gelecek}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://kozmosapi-001-site1.itempurl.com/api/Products/{{id gelecek}}",
+					"protocol": "http",
+					"host": [
+						"kozmosapi-001-site1",
+						"itempurl",
+						"com"
+					],
+					"path": [
+						"api",
+						"Products",
+						"{{id gelecek}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Product By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://kozmosapi-001-site1.itempurl.com/api/Products/{{id gelecek}}",
+					"protocol": "http",
+					"host": [
+						"kozmosapi-001-site1",
+						"itempurl",
+						"com"
+					],
+					"path": [
+						"api",
+						"Products",
+						"{{id gelecek}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Category By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://kozmosapi-001-site1.itempurl.com/api/Categories/{{id gelecek}}",
+					"protocol": "http",
+					"host": [
+						"kozmosapi-001-site1",
+						"itempurl",
+						"com"
+					],
+					"path": [
+						"api",
+						"Categories",
+						"{{id gelecek}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Customer Messages",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token gelecek}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:44358/api/CustomerMessage",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44358",
+					"path": [
+						"api",
+						"CustomerMessage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Customer Message",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+						"key": "Authorization",
+						"value": "Bearer {{token gelecek}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"string\",\r\n  \"text\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44358/api/CustomerMessage",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44358",
+					"path": [
+						"api",
+						"CustomerMessage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change Resolved State",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token gelecek}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:44358/api/CustomerMessage/changeresolved/{{id gelecek}}",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44358",
+					"path": [
+						"api",
+						"CustomerMessage",
+						"changeresolved",
+						"{{id gelecek}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Product",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token gelecek}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"productName\": \"string\",\r\n  \"productImage\": \"string\",\r\n  \"priceWithoutDiscount\": 0,\r\n  \"priceWithDiscount\": 0,\r\n  \"stock\": 0,\r\n  \"youtubeUrl\": \"string\",\r\n  \"productDescription\": \"string\",\r\n  \"categoryId\": 0,\r\n  \"isFeatured\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://kozmosapi-001-site1.itempurl.com/api/Products/{{id gelecek}}",
+					"protocol": "http",
+					"host": [
+						"kozmosapi-001-site1",
+						"itempurl",
+						"com"
+					],
+					"path": [
+						"api",
+						"Products",
+						"{{id gelecek}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change Featured State",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://kozmosapi-001-site1.itempurl.com/api/Products/changefeatured/{{id gelecek}}",
+					"protocol": "http",
+					"host": [
+						"kozmosapi-001-site1",
+						"itempurl",
+						"com"
+					],
+					"path": [
+						"api",
+						"Products",
+						"changefeatured",
+						"{{id gelecek}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Product by Given String",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://kozmosapi-001-site1.itempurl.com/api/Products/search?input=kırmızı",
+					"protocol": "http",
+					"host": [
+						"kozmosapi-001-site1",
+						"itempurl",
+						"com"
+					],
+					"path": [
+						"api",
+						"Products",
+						"search"
+					],
+					"query": [
+						{
+							"key": "input",
+							"value": "kırmızı"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Site Info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://kozmosapi-001-site1.itempurl.com/api/SiteInfo",
+					"protocol": "http",
+					"host": [
+						"kozmosapi-001-site1",
+						"itempurl",
+						"com"
+					],
+					"path": [
+						"api",
+						"SiteInfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Site Info",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"phoneNumber\": \"string\",\r\n  \"description\": \"string\",\r\n  \"keyWords\": \"string\",\r\n  \"facebookUrl\": \"string\",\r\n  \"instagramUrl\": \"string\",\r\n  \"linkedinUrl\": \"string\",\r\n  \"siteName\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://kozmosapi-001-site1.itempurl.com/api/SiteInfo",
+					"protocol": "http",
+					"host": [
+						"kozmosapi-001-site1",
+						"itempurl",
+						"com"
+					],
+					"path": [
+						"api",
+						"SiteInfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"fullName\": \"string\",\r\n  \"email\": \"user@example.com\",\r\n  \"password\": \"string\",\r\n  \"confirmPassword\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://kozmosapi-001-site1.itempurl.com/api/User/register",
+					"protocol": "http",
+					"host": [
+						"kozmosapi-001-site1",
+						"itempurl",
+						"com"
+					],
+					"path": [
+						"api",
+						"User",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Log In",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"user@example.com\",\r\n  \"password\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://kozmosapi-001-site1.itempurl.com/api/User/login",
+					"protocol": "http",
+					"host": [
+						"kozmosapi-001-site1",
+						"itempurl",
+						"com"
+					],
+					"path": [
+						"api",
+						"User",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"/*",
+					"",
+					"",
+					"",
+					"",
+					"",
+					"",
+					" */"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

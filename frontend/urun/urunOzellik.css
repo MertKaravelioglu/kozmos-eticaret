@@ -1,0 +1,101 @@
+.urun-ozellik-tablo {
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid #000;
+    /* padding: 10px; */
+    width: 100%;
+    
+    
+}
+
+.ozellik-tablo-element {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.ozellik-tablo-element:hover {
+    background-color: rgb(200, 200, 200);
+}
+
+.urun-ozellikleri {
+    /* display: flex; */
+    /* justify-content: space-around; */
+    border: 1px solid #000;
+    padding: 20px;
+    width: calc(100% - 40px);
+}
+
+.urun-ozellikleri-baslik {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.urun-ozellikleri-icerik {
+    text-align: justify;
+}
+
+.urun-yorumlar {
+
+    border: 1px solid #000;
+    padding: 20px;
+    width: calc(100% - 40px);
+}
+
+.urun-yorum {
+
+    border: 1px solid #000;
+    padding: 10px;
+    margin-top: 20px;
+    /* margin-bottom: 10px; */
+    border-radius: 10px;
+}
+
+.urun-yorum-top {
+
+    font-size: 1rem;display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.urun-ppandname {
+
+    display: flex;
+    align-items: center;
+}
+
+.user-img {
+border-radius: 32px;
+}
+
+.user-name {
+
+    font-size: 2rem;padding-left: 10px;
+}
+
+.urun-stars {
+    display: flex;
+}
+
+.comment {
+    font-size: 0.9rem;padding-left: 10px;
+}
+
+.urun-yorum-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.urun-star-png {
+    width: 30px;
+    height: 30px;
+}
+
+.urun-benzer {
+    position: relative;display: flex;
+    width: calc(100% - 50px);
+    
+flex-direction: column;}
+.urun-benzer-alt{display: flex;overflow: hidden;}

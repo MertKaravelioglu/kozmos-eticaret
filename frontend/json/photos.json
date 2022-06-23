@@ -1,0 +1,38 @@
+[
+  {
+      "productId": 1,
+      "productName": "Ion Mustang Lp 4-İn-1 Pikap Kırmızı",
+      "productImage": "pikap.png",
+      "priceWithoutDiscount": 3199.0000,
+      "priceWithDiscount": 3000.0000,
+      "stock": 255,
+      "youtubeUrl": "http://youtube.com/kozmospikap",
+      "productDescription": "Kırmızı Mustang Pikap",
+      "isFeatured": 0,
+      "categoryName": "Pikap"
+  },
+  {
+      "productId": 2,
+      "productName": "Canon Fotoğraf Makinesi",
+      "productImage": "fotografmakinesi.png",
+      "priceWithoutDiscount": 2200.0000,
+      "priceWithDiscount": 1180.0000,
+      "stock": 50,
+      "youtubeUrl": "http://youtube.com/kozmosfotografmakinesi",
+      "productDescription": "Profesyonel fotoğraf makinesi",
+      "isFeatured": 1,
+      "categoryName": "Fotoğraf Makinesi"
+  },
+  {
+      "productId": 3,
+      "productName": "Çiçekli Elbise",
+      "productImage": "ciceklielbise.jpg",
+      "priceWithoutDiscount": 200.0000,
+      "priceWithDiscount": 150.0000,
+      "stock": 120,
+      "youtubeUrl": "http://youtube.com/kozmosciceklielbise",
+      "productDescription": "Bahar kadın çiçekli elbise",
+      "isFeatured": 0,
+      "categoryName": "Giyim"
+  }
+]

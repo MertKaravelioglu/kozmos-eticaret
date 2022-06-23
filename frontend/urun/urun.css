@@ -1,0 +1,178 @@
+.urun-bilgi-container {
+    width: 100%;
+    display: flex;
+}
+
+.urunleft {
+    padding: 20px;
+}
+
+.subimgs {
+    position: relative;
+    display: flex;
+
+    justify-content: center;
+}
+
+.subimg {
+    width: 64px;
+    aspect-ratio: 1;
+    margin: 5px;
+}
+
+.currentimg {
+    border: 1px solid rgb(0 0 0);
+    width: 250px;
+    aspect-ratio: 1;
+}
+
+.selected {
+    border: 1px solid #000;
+}
+
+.urunrigth {
+    width: inherit;
+    padding: 20px;
+}
+
+.urunAdi {
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.urunAciklama {
+    text-align: justify;
+}
+
+.fiyat {
+    text-align: right;
+    color: green;
+    font-size: 2rem;
+}
+
+.rigtharrow {
+    position: absolute;
+    right: -32px;
+    top: calc(50% - 18px);
+    width: 32px;
+    height: 32px;
+    transform: rotate(90deg);
+    filter: brightness(0.5);
+}
+
+.leftarrow {
+    position: absolute;
+    left: -32px;
+
+    top: calc(50% - 18px);
+    height: 32px;
+    transform: rotate(-90deg);
+}
+
+.addpanel {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.addsmth {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    user-select: none;
+    /* padding-top: 5px; */
+}
+
+.addsmth:hover {
+    background-color: rgb(200, 200, 200);
+}
+
+.urun-sayfa-container {
+    width: 1000px;display: flex;
+    flex-direction: column;
+    align-items: center;
+margin: auto;}
+
+.IndirimsizFiyat {
+
+    text-align: right;
+    color: #800;
+    font-size: 1.7rem;
+    text-decoration: line-through;
+}
+
+.urun-ad-kategori {
+    display: flex;
+    margin-bottom: 5px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.urun-ad-kategori>.urun-categoryName {
+    font-size: 1.2rem;
+    background-color: #098;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.urun-categoryName {
+    font-size: 1.2rem;
+    background-color: #098;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+@media only screen and (max-width: 1100px) {
+    .urun-sayfa-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .currentimg{
+        width: 100%;
+    }
+    .subimgs{
+        display: unset;
+    }
+}
+
+.urun-bilgi-container.sepet-total {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid;
+}
+
+.urun-bilgi-container.sepet-total>h1 {
+    padding-inline: 20px;
+}
+
+.urun-bilgi-container.sepet-total.sepet-satinal {}
+
+.sepet-satinal {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.sepet-satinal>div {
+    padding: 10px;
+    border: 1px solid;
+    font-size: x-large;
+    user-select: none;
+}
+
+.sepet-satinal>div:hover {
+    background-color: rgb(200, 200, 200);
+}
+
+.addpanel.addpanel-rigth {
+    justify-content: flex-end;
+}

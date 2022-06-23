@@ -1,0 +1,121 @@
+.urun-card {
+    width: 240px;
+    margin: 20px;
+}
+
+.urun-card:hover {
+    background-color: rgb(240, 240, 240);
+    margin: 10px;
+    padding: 10px;
+}
+
+.urunFoto {
+    object-fit: cover;
+    width: 240px;
+    aspect-ratio: 1;
+    margin-bottom: 20px;
+    border: 1px solid #000;
+}
+
+.urunInfo {
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid #000;
+    padding: 5px;
+    flex-direction: row;
+}
+
+
+.urun-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+
+}
+
+.urunInfo-rigth {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.old-price {
+    color: #800;
+    text-decoration: line-through;
+    font-size: 1.3rem;
+}
+
+.new-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0a0;
+}
+
+.urun-discount {
+font-size: 1.5rem;
+font-weight: bold;
+margin-top: 10px;
+text-align: center;
+color: #0a0;
+transform: rotate(25deg);
+z-index: 999;
+width: 100%;
+}
+
+.urun-container {
+
+    display: flex;
+    flex-wrap: wrap;
+    width: 850px;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.addsmth {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    user-select: none;
+    /* padding-top: 5px; */
+}
+
+.addsmth:hover {
+    background-color: rgb(200, 200, 200);
+}
+
+.category-categoryName {
+    display: flex;
+    margin-top: 30px;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+
+iframe {
+    width: calc(100%);
+}
+
+@media only screen and (max-width: 1100px) {
+    .urun-container{
+        width: 100%;
+        margin: auto;
+    display: flex;justify-content: center;}
+}
+.uruncard-categoryName{
+    font-size: 1rem;
+    background-color: #098;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.urunInfo-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
