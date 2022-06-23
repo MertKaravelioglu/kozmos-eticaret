@@ -8,5 +8,6 @@ Bu Kapsamda; <br>
 - Kullanıcı Frontend: Adem Pelit <br>
 - Tasarım: Mert Karavelioğlu <br><br>
 Kısımlarında görev aldık.<br>
-Projeye ait Backend tarafı REST API routeları da aşağıdaki görselde yer almaktadır. <br>
+Projeye ait Backend tarafı REST API routeları da aşağıdaki görselde yer almaktadır.
+ <br>
 ![Screenshot](https://github.com/MertKaravelioglu/kozmos-eticaret/blob/main/project-images/backend.png)
